@@ -4,11 +4,25 @@
   </ion-toolbar>
 </ion-header >
 <ion-content class="centrado">
+
+<form (ngSubmit)=login(forma) #forma="ngForm">
+
   <ion-card>
   <img src="/assets/icon/j.png" width="200px" lang="100px">
- <ion-input  placeholder=""><h4>usurario</h4></ion-input>
-  <ion-input type="password"><h4>contraseña</h4></ion-input>
-  <ion-button routerLink="/home/tabs/tab1">ingresar</ion-button>
-</ion-card>
 
+ <ion-item>
+  <img src="" alt="">
+  
+  <ion-label position="stacked">Correo Electronico</ion-label>
+  <ion-input  ngModel #User="ngModel" name="User" minlength= "3"></ion-input>
+ </ion-item>
+
+ <ion-item>
+   <ion-label position="stacked">Contraseña</ion-label>
+   <ion-input ngModel #User="ngModel" name="User" type="password" minlength= "3"></ion-input>
+  
+ </ion-item>
+  <ion-button type="submit" [disabled]=!forma.valid>ingresar</ion-button>
+</ion-card>
+</form>
 </ion-content>
