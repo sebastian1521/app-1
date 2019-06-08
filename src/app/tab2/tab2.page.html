@@ -1,9 +1,42 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Two
+      REGISTRO
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+    <form (ngSubmit)=login(forma) #forma="ngForm">
+  <div class="img-tab2">
+    <img src="\assets\icon/1.jpg" width="250" lang="250" ><br><h1>
+   MAPS</h1><br>
+   tenga en cuenta que el administrador revisara su solicitud y dentro de las siguientes 24 hopras le confirmara<br><br>
+   <ion-input plasceholder= "text"><ion-icon name="at"></ion-icon>CORREO</ion-input><hr>
+
+   <ion-input plasceholder= "text">
+    <ion-icon name="contacts"><ion-icon>USUARIO<ion-input><hr>
+    <ion-input  ngModel #User="ngModel" name="User" minlength= "3"></ion-input>
+
+   <ion-input plasceholder= "text"><ion-icon name="finger-print">
+   </ion-input>ion-icon>CONTRASEÑA</ion-input>
+   <ion-input  ngModel #User="ngModel" name="User" minlength= "3"></ion-input>
+   
+   <ion-input plasceholder= "text"><ion-icon name="finger-print">
+   </ion-icon>REPITA CONTRASEÑA</ion-input>
+   <ion-input  ngModel #User="ngModel" name="User" minlength= "3"></ion-input>
+
+
+   <ion-button>REGISTRAR</ion-button>
+
+   
+  </div>
+
+
+
+
+
+
+</
+
+</ion-content>
