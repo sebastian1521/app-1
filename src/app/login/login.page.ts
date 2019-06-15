@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { LoadingController } from '@ionic/angular';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -23,9 +24,12 @@ export class LoginPage implements OnInit {
   {
     if (forma.valid) {
       console.log("ingrese a login");
-      const loading = await this.loadingCtrl.create({
+      const loading =  await this.loadingCtrl.create({
+        
         message: 'Validando...',
-        spinner: 'dots'
+        spinner: 'dots',
+        duration: 1000,
+        
       
       });
 
@@ -37,13 +41,14 @@ export class LoginPage implements OnInit {
     if  (this.user.usuario === forma.value.User && this.user.password === forma.value.password)
     {
       this.loadingCtrl.dismiss();
+
       console.log("verdadero")
       //this.user.usuario = forma.value.email;
       //this.user.password = forma.value.clave;
     }
     else
     {
-      console.log("falso")
+     console.log("falso")
     }
  }
 }

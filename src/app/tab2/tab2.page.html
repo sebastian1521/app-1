@@ -2,32 +2,35 @@
   <ion-toolbar>
     <ion-title>
       REGISTRO
+      <ion-button color="primary" href='http://localhost:8100/'>Volver a home</ion-button>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-    <form (ngSubmit)=login(forma) #forma="ngForm">
-  <div class="img-tab2">
-    <img src="\assets\icon/1.jpg" width="250" lang="250" ><br><h1>
+<ion-content  >
+   
+  <div class="img-tab2" class="fondo">
+    <img class="centrado" src="\assets\icon\05-512.png" width="250" lang="250" ><br><h1>
    MAPS</h1><br>
-   tenga en cuenta que el administrador revisara su solicitud y dentro de las siguientes 24 hopras le confirmara<br><br>
-   <ion-input plasceholder= "text"><ion-icon name="at"></ion-icon>CORREO</ion-input><hr>
+   tenga en cuenta que el administrador revisara su solicitud y dentro de las siguientes 24 horas le confirmara<br><br>
+   <ion-input plasceholder= "text"><ion-icon name="at"></ion-icon>CORREO</ion-input>
 
    <ion-input plasceholder= "text">
-    <ion-icon name="contacts"><ion-icon>USUARIO<ion-input><hr>
-    <ion-input  ngModel #User="ngModel" name="User" minlength= "3"></ion-input>
+    <ion-icon name="contacts"></ion-icon>USUARIO
+    </ion-input>
 
-   <ion-input plasceholder= "text"><ion-icon name="finger-print">
-   </ion-input>ion-icon>CONTRASEÑA</ion-input>
-   <ion-input  ngModel #User="ngModel" name="User" minlength= "3"></ion-input>
+   <ion-input type="password">
+     <ion-icon name="finger-print" ></ion-icon>
+    CONTRASENA
+   </ion-input>
    
-   <ion-input plasceholder= "text"><ion-icon name="finger-print">
-   </ion-icon>REPITA CONTRASEÑA</ion-input>
-   <ion-input  ngModel #User="ngModel" name="User" minlength= "3"></ion-input>
+   <ion-input type="password">
+    <ion-icon name="finger-print"></ion-icon>
+    REPITA CONTRASENA
+   </ion-input>  
 
 
-   <ion-button>REGISTRAR</ion-button>
+   <ion-button routerLink="/home/tabs/tab3"> REGISTRAR</ion-button>
 
    
   </div>
@@ -37,6 +40,6 @@
 
 
 
-</
+
 
 </ion-content>

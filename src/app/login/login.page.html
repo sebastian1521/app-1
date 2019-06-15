@@ -5,26 +5,30 @@
 </ion-header >
 <ion-content class="centrado">
 
-<form (ngSubmit)=login(forma) #forma="ngForm">
+<form (ngSubmit)=login(forma) #forma="ngForm" class="fondo">
 
   <ion-card>
-  <img src="/assets/icon/j.png" width="200px" lang="100px">
+  <img src="\assets\icon\05-512.png" width="200px" lang="100px">
 
- <ion-item>
-  <img src="" alt="">
+
+  <ion-item color="tertiary">
   
-  <ion-label position="stacked">Correo Electronico</ion-label>
+  
+  <ion-label  position="stacked">Correo Electronico</ion-label>
   <ion-input required ngModel #User="ngModel" name="User" minlength= "3"></ion-input>
  </ion-item>
 
- <ion-item>
+ <ion-item color="tertiary">
    <ion-label position="stacked">Contraseña</ion-label>
    <ion-input required ngModel #User="ngModel" name="password" type="password" minlength= "3"></ion-input>
   
  </ion-item>
-  <ion-button expand="full" fill="outline" shape="round" type="submit" [disabled]=!forma.valid>ingresar</ion-button><br>
-  <ion-button class="izquierda" fill="outline" shape="round"  routerLink="/home/tabs/tab3" >invitado</ion-button>
-  <ion-button class="derecha" zize="large" fill="outline" shape="round" routerLink="/home/tabs/tab2">registro</ion-button> 
+  <ion-button color="primary" expand="full" shape="round" type="ngSubmit"  [disabled]=!forma.valid>ingresar</ion-button><br>
+  <ion-label class="label">________________________0_______________________
+ </ion-label><br>
+
+  <ion-button color="primary" class="izquierda"  shape="round"  routerLink="/home/tabs/tab3" >invitado</ion-button>
+  <ion-button color="primary" class="derecha" zize="large"  shape="round" routerLink="/home/tabs/tab2">registro</ion-button> 
 </ion-card>
 </form>
 </ion-content>
